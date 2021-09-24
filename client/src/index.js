@@ -3,10 +3,17 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { HashRouter, Switch, Route } from 'react-router-dom'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <HashRouter>
+      <Switch>
+        <Route exact path={'/'} component={App} />
+        <Route render={() => <h1>404</h1>} />
+      </Switch>
+
+    </HashRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -1,18 +1,19 @@
 import * as express from 'express'
 import { getCourseById, getCourses, getStudentById, getStudents } from './routes'
 import * as cors from 'cors'
+import { access } from 'fs'
 
-const corsOptions ={
-    origin:'http://localhost:3000', 
-    credentials:true,            //access-control-allow-credentials:true
-    optionSuccessStatus:200
+const corsOptions = {
+    origin: true,
+    credentials: true,            //access-control-allow-credentials:true
+    optionSuccessStatus: 200
 }
 
 export default class WebServer {
 
     private readonly app: express.Express
     private closer: () => Promise<void>
-    
+
 
     constructor() {
         this.app = express()
@@ -23,11 +24,11 @@ export default class WebServer {
             res.send('hej')
         })
         this.app.get('/courses', getCourses)
-        
+
         this.app.get('/courses/:id', getCourseById)
-        
+
         this.app.get('/students', getStudents)
-        
+
         this.app.get('/students/:id', getStudentById)
 
         // Basic error handling

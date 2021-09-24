@@ -1,17 +1,17 @@
 import './App.css';
 import { MyNavbar } from './Components/Navbar';
-import { getStudents } from './libs/requests';
+import { DataTextComponent } from './Components/DataText'
 
 
 
-async function App() {
-    const response = await getStudents()
-    console.log(response)
+function App() {
+    console.log("hej")
+
     return (
         <div>
             <MyNavbar />
             <h1>Hej</h1>
-            <h2>{response.success ? response.data : 'med dig'}</h2>
+            <DataTextComponent />
         </div>
     );
 }
