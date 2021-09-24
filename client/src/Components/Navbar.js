@@ -1,6 +1,7 @@
 import * as React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import logo from '../logo.svg';
+import { CourseDropdown } from './CourseDropdown'
 import { Navbar, Container, NavbarBrand, Nav } from 'react-bootstrap';
 
 export const MyNavbar = () => {
@@ -8,7 +9,7 @@ export const MyNavbar = () => {
         <div>
             <Navbar bg="dark" variant="dark">
                 <Container>
-                    <NavbarBrand href="#home">
+                    <NavbarBrand href="/">
                         <img
                             alt=""
                             src={logo}
@@ -21,8 +22,9 @@ export const MyNavbar = () => {
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto">
-                            <Nav.Link href="#home">Home</Nav.Link>
+                            <Nav.Link href="/">Home</Nav.Link>
                             <Nav.Link href="#about">About</Nav.Link>
+                            <CourseDropdown />
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
