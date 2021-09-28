@@ -1,6 +1,6 @@
 import React from "react"
 import { NavDropdown } from "react-bootstrap";
-import { getcourses } from "../libs/requests";
+import { getcourses } from "@libs/requests.js";
 
 // Creates a NavDropdown with course number and course title: <number> - <title>
 export class CourseDropdown extends React.Component {

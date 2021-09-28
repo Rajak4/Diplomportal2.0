@@ -1,6 +1,7 @@
 const aliases = (prefix = `src`) => ({
     '@components': `${prefix}/components`,
-    '@images': `${prefix}/images`
+    '@images': `${prefix}/images`,
+    '@libs':  `${prefix}/libs`
   });
   
   module.exports = aliases;

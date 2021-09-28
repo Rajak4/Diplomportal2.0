@@ -1,6 +1,7 @@
 import * as React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
-import logo from '../logo.svg';
+//import logo_clear from '../../img/logo_clear.png'
+import logo_white from '@images/logo_white.png'
 import { CourseDropdown } from './CourseDropdown'
 import { Navbar, Container, NavbarBrand, Nav } from 'react-bootstrap';
 
@@ -12,12 +13,12 @@ export const MyNavbar = () => {
                     <NavbarBrand href="/">
                         <img
                             alt=""
-                            src={logo}
+                            src={logo_white}
                             width="30"
                             height="30"
                             className="align-top"
                         />{' '}
-                        React Bootstrap
+                        Diplomportal 2.0
                     </NavbarBrand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
