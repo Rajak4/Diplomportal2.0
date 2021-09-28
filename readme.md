@@ -4,4 +4,4 @@ API:
 - `npm run nodemon` to start the server. Use localhost:8000/_endpoint_ to fetch data.
 
 Client:
-- Currently f*cked because of CORS policies.
+- `npm run start` to start the client. Use localhost:3000.
