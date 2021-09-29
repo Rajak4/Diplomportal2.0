@@ -1,7 +1,7 @@
 import WebServer from "./webserver"
 
 const webServer = new WebServer()
-const PORT = 8000;
+const PORT = Number(process.env.PORT) || 8000;
 
 (async () => {
         console.log('Initializing');
